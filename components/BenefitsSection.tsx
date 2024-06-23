@@ -40,7 +40,7 @@ const BenefitsSection = () => {
   }
   return (
     <div
-      className="flex flex-row gap-6 justify-center"
+      className="flex lg:flex-row flex-col h-full gap-6 justify-center"
     //   onMouseMove={handleMouseMove}
     >
       {benefits_list.map((benefit, index) => (

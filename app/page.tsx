@@ -8,7 +8,7 @@ import apolloLogo from '@public/assets/images/apollo-white-logo.svg'
 import mockupApollo from "@public/assets/images/mockup-apollo-iphone.png";
 import lineOrange from "@public/assets/images/line-orange.svg";
 import { MotionDiv, MotionH1, MotionH2, MotionP } from "@components/Transition";
-import { MotionBenefit } from "@components/CustomAnimations";
+import { MotionBenefit, MotionDivView } from "@components/CustomAnimations";
 import BenefitsSection from "@components/BenefitsSection";
 
 let feedback_list = [
@@ -23,6 +23,12 @@ let feedback_list = [
       "“Excelente plataforma para avaliar e descobrir músicas. As recomendações são sempre precisas e de acordo com meu gosto musical. Parabéns pelo ótimo trabalho!”",
     data: "15/06/2024",
     user: "Caroline Gusmão",
+  },
+  {
+    texto:
+      "“O aplicativo é fantástico! Consegui descobrir novos artistas e álbuns incríveis. A comunidade também é muito ativa e engajada.",
+    data: "15/06/2024",
+    user: "Beatriz Almeida",
   },
   {
     texto:
@@ -99,37 +105,37 @@ const SecondSection = () => {
         backgroundSize: "cover",
         backgroundPositionY: "400px",
       }}
-      className="flex flex-row justify-start items-center w-full h-[360px]"
+      className="overflow-hidden flex flex-row justify-start items-center w-full h-[360px]"
     >
-      <MotionDiv className="text-white font-bold px-20 md:text-4xl min-w-auto text-2xl md:w-[60%] md:min-w-[675px] uppercase">
+      <MotionDivView type="left" className="text-white font-bold px-20 md:text-4xl min-w-auto text-2xl md:w-[60%] md:min-w-[675px] uppercase">
         <h1>
           Avalie suas músicas, álbuns e artistas favoritos, onde quer que você
           esteja e a qualquer momento.
         </h1>
-      </MotionDiv>
+      </MotionDivView>
     </div>
   );
 };
 const ThirdSection = () => {
   return (
-    <div className="bg-[#030303] py-[10rem] flex flex-row justify-center items-center w-full h-[700px]">
-      <MotionDiv className="flex flex-col gap-5 text-center rounded-[30px] justify-center items-center border-2 border-[#363636] bg-gradient-to-br from-[#1E1E1E] to-[#030303] w-[1100px] h-[530px] text-white font-bold px-20   min-w-auto ">
-        <MotionH1 className="text-6xl font-extrabold">
+    <div className="bg-[#030303]  lg:px-[10rem] md:px-[5rem] px-[2rem] py-[10rem] flex flex-row justify-center items-center w-full ">
+      <MotionDivView type="right" className="max-w-[1000px]  overflow-hidden w-full h-full py-20 lg:px-20 px-10 flex flex-col text-center rounded-[30px] justify-center items-center border-2 border-[#363636] bg-gradient-to-br from-[#1E1E1E] to-[#030303]  text-white font-bold    min-w-auto ">
+        <MotionH1 className="lg:text-6xl  text-4xl font-extrabold">
           Avaliações Musicais que Fazem a Diferença.
         </MotionH1>
-        <MotionP className="text-[20px] font-light w-[90%]">
+        <MotionP className="lg:text-[20px] md:text-[17px] items-center flex justify-center py-5 font-light w-[90%]">
           Sabemos que cada música, letra e ritmo conta uma história única. Por
           isso, criamos uma plataforma onde você pode descobrir novas músicas,
           avaliar suas favoritas e se conectar com outros amantes da música.
         </MotionP>
-      </MotionDiv>
+      </MotionDivView>
     </div>
   );
 };
 const FeedBacks = () => {
   return (
-    <div className="bg-[#030303]  flex flex-row justify-center items-center w-full h-[600px] pb-[100px]">
-      <MotionDiv className="gap-5 flex flex-col">
+    <div className="bg-[#030303]  inline-flex sm:flex flex-row justify-center items-center w-full  pb-[100px]">
+      <MotionDivView type="left" className="overflow-hidden flex-wrap h-full gap-5 flex flex-col">
         <MotionDiv className="text-center">
           <MotionH2 className="text-xl text-primary uppercase">Nossos</MotionH2>
           <MotionH1 className="text-3xl font-bold uppercase">
@@ -137,7 +143,7 @@ const FeedBacks = () => {
           </MotionH1>
         </MotionDiv>
 
-        <MotionDiv className="flex flex-row gap-6">
+        <MotionDiv className="flex flex-wrap justify-center  flex-row gap-6">
           {feedback_list.map((feedback, index) => (
             <div
               key={index}
@@ -156,15 +162,15 @@ const FeedBacks = () => {
             </div>
           ))}
         </MotionDiv>
-      </MotionDiv>
+      </MotionDivView>
     </div>
   );
 };
 const Benefits = () => {
   return (
-    <div className="bg-[#0E0E0E] rounded-t-[50px] flex flex-row justify-center items-center w-full h-[650px]">
-      <MotionDiv className="gap-5 flex flex-col">
-        <MotionDiv className="text-center">
+    <div className="bg-[#0E0E0E] rounded-t-[50px] flex py-20  flex-row justify-center items-center w-full">
+      <MotionDivView type="right" className="overflow-hidden gap-5 flex flex-col">
+        <MotionDiv className="text-center py-10">
           <MotionH2 className="text-xl text-primary uppercase">Nossos</MotionH2>
           <MotionH1 className="text-3xl font-bold uppercase">
             Benefícios
@@ -172,28 +178,28 @@ const Benefits = () => {
         </MotionDiv>
 
         <BenefitsSection />
-      </MotionDiv>
+      </MotionDivView>
     </div>
   );
 };
 const Community = () => {
   return (
     <div className="bg-[#0E0E0E]   flex flex-row justify-center items-center w-full pb-[100px]">
-      <MotionDiv className="gap-5 px-[30px] flex flex-col">
+      <MotionDivView type="left"  once={true} className="gap-5 px-[30px] flex flex-col">
         <MotionDiv
           style={{
           backgroundImage: "url('/assets/images/community-image.png')",
           backgroundSize: "cover",
           // backgroundPositionY: "400px",
           }}
-          className="mx-[30px] rounded-[30px] text-center justify-center items-center flex flex-col gap-4 w-[1270px] h-[530px]">
+          className="lg:px-[200px] px-5 rounded-[30px] text-center justify-center items-center flex flex-col gap-4  h-[530px]">
           <MotionH2 className="text-xl text-primary font-bold uppercase">APOLLO</MotionH2>
 
-          <div className="text-center flex flex-col w-[700px] justify-center items-center gap-3">
-            <MotionH1 className="text-5xl font-bold  text-center">
+          <div className="text-center flex flex-col w-full justify-center items-center gap-3">
+            <MotionH1 className="md:text-5xl text-4xl font-bold  text-center">
               Junte-se à nossa comunidade agora mesmo!
             </MotionH1>
-            <MotionP className="w-[500px]">
+            <MotionP className="w-full">
               Nossa missão é fazer com que mais pessoas se conectem por meio da
               música.
             </MotionP>
@@ -203,7 +209,7 @@ const Community = () => {
             Explorar
           </div>
         </MotionDiv>
-      </MotionDiv>
+      </MotionDivView>
     </div>
   );
 };
@@ -229,11 +235,11 @@ const Footer = () => {
               <hr className="h-[5px] bg-white border-2 w-full border-white"></hr>
 
               <div className="flex flex-row w-full justify-between py-3">
-                <MotionP className="w-full">
+                <MotionP className="md:text-[17px] text-[10px] w-full">
                   @ 2024 APOLLO - Todos os direitos reservados.
                 </MotionP>
 
-                <MotionP className="w-full text-end">
+                <MotionP className="md:text-[17px] text-[10px] w-full text-end">
                   São Paulo - Brasil
                 </MotionP>
               </div>
