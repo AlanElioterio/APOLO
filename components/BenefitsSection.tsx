@@ -26,11 +26,11 @@ const BenefitsSection = () => {
   let currentDiv = useMotionValue(null);
 
   function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
-    let { left, top } = currentTarget.getBoundingClientRect();
+    let { left, top } = currentTarget?.getBoundingClientRect();
 
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
-    currentDiv.set(currentTarget.current);
+    currentDiv.set(currentTarget?.current);
     
     console.log(currentDiv);
   }
