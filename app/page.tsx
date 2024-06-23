@@ -52,7 +52,7 @@ const FirstSection = () => {
       style={{
         backgroundImage: "url('/assets/images/line-orange.svg')",
         backgroundSize: 'cover',
-        backgroundPositionX:"-800px"
+        backgroundPositionX:"-300px"
       }}
       className={`overflow-hidden flex-wrap w-full h-full items-center flex flex-col`}
     >
@@ -178,15 +178,15 @@ const Benefits = () => {
 };
 const Community = () => {
   return (
-    <div className="bg-[#0E0E0E]  flex flex-row justify-center items-center w-full h-[600px] pb-[100px]">
-      <MotionDiv className="gap-5 flex flex-col">
+    <div className="bg-[#0E0E0E]   flex flex-row justify-center items-center w-full pb-[100px]">
+      <MotionDiv className="gap-5 px-[30px] flex flex-col">
         <MotionDiv
           style={{
           backgroundImage: "url('/assets/images/community-image.png')",
           backgroundSize: "cover",
           // backgroundPositionY: "400px",
           }}
-          className="rounded-[30px] text-center justify-center items-center flex flex-col gap-4 w-[1330px] h-[530px]">
+          className="mx-[30px] rounded-[30px] text-center justify-center items-center flex flex-col gap-4 w-[1270px] h-[530px]">
           <MotionH2 className="text-xl text-primary font-bold uppercase">APOLLO</MotionH2>
 
           <div className="text-center flex flex-col w-[700px] justify-center items-center gap-3">
@@ -212,7 +212,7 @@ const Community = () => {
 const Footer = () => {
   return (
   <div className="bg-primary flex flex-row justify-center items-center w-full h-[250px]">
-      <MotionDiv className="gap-5 flex justify-start items-start flex-col w-full  max-w-[1330px]">
+      <MotionDiv className="px-10 gap-5 flex justify-start items-start flex-col w-full  max-w-[1330px]">
         <div
           className="text-center w-full justify-center items-center flex flex-col gap-4">
 
