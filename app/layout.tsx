@@ -37,6 +37,7 @@ const RootLayout = ({children}:Props) => {
                     <div className='fixed z-[2000] flex-row flex justify-between items-center bg-transparent w-screen p-4 px-10'>
 
                         <Image
+                            alt="Logotipo"
                             src={apolloLogo}
                             width={75}
                         />

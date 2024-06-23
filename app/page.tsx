@@ -67,7 +67,7 @@ const FirstSection = () => {
         /> */}
 
         <div className="self-start lg:flex hidden flex-wrap ">
-          <Image className="max-w-[700px] flex " src={mockupApollo} />
+          <Image alt="Mockup Celular com a página inicial" className="max-w-[700px] flex " src={mockupApollo} />
         </div>
 
         <div className="max-w-[600px] h-full justify-center items-center gap-5 flex flex-wrap">
@@ -219,6 +219,7 @@ const Footer = () => {
           <div className="text-start flex flex-col w-full justify-start items-start gap-5">
             <MotionDiv>
               <Image
+                alt='Logotipo'
                 src={apolloLogo}
                 width={201}
               />
