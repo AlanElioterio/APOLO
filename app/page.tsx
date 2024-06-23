@@ -103,11 +103,12 @@ const SecondSection = () => {
       style={{
         backgroundImage: "url('/assets/images/toca-discos-wall.png')",
         backgroundSize: "cover",
-        backgroundPositionY: "400px",
+        backgroundPosition: 'right',
+        
       }}
       className="overflow-hidden flex flex-row justify-start items-center w-full h-[360px]"
     >
-      <MotionDivView type="left" className="text-white font-bold px-20 md:text-4xl min-w-auto text-2xl md:w-[60%] md:min-w-[675px] uppercase">
+      <MotionDivView type="left" className="text-white font-bold  px-10 md:px-20 md:text-4xl min-w-auto text-2xl md:w-[60%] md:min-w-[675px] uppercase">
         <h1>
           Avalie suas músicas, álbuns e artistas favoritos, onde quer que você
           esteja e a qualquer momento.
@@ -135,7 +136,7 @@ const ThirdSection = () => {
 const FeedBacks = () => {
   return (
     <div className="bg-[#030303]  inline-flex sm:flex flex-row justify-center items-center w-full  pb-[100px]">
-      <MotionDivView type="left" className="overflow-hidden flex-wrap h-full gap-5 flex flex-col">
+      <MotionDivView type="left"  className="overflow-hidden flex-wrap h-full gap-5 flex flex-col">
         <MotionDiv className="text-center">
           <MotionH2 className="text-xl text-primary uppercase">Nossos</MotionH2>
           <MotionH1 className="text-3xl font-bold uppercase">

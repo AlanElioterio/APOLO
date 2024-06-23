@@ -43,7 +43,7 @@ children: React.ReactNode;
     initial="offscreen"
     whileInView="onscreen"
   
-    viewport={{  once: true, amount: 0.8 }}
+    viewport={{  once: true }}
     
     style={style}
     // className="overflow-hidden"
