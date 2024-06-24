@@ -33,7 +33,7 @@ interface Props {
 const RootLayout = ({children}:Props) => {
     return (
         <html>
-            <body className='bg-[#3d3d3d] select-none overflow-x-hidden h-full'>
+            <body className='bg-[#030303] select-none overflow-x-hidden h-full'>
                 <Transition>
                     {children}
                 </Transition>
