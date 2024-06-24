@@ -13,7 +13,7 @@ interface Props {
 const LoginLayout = ({children}:Props) => {
   return (
 
-    <div className='bg-[#3d3d3d] w-full h-full justify-center flex'>
+    <div className='bg-[#030303] w-full h-full justify-center flex'>
         <Transition>
             {children}
         </Transition>
