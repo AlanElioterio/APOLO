@@ -55,8 +55,8 @@ const SignInForm = () => {
             <BotaoSecundario acao={handleSubmit} text="Entrar"/>
             {/* <LoginButton/> */}
             <button onClick={()=>alert("spotify")} type="button" className="text-[17px] h-[40px] hover:bg-primary transition-all duration-300 rounded-lg bg-transparent border-2 flex flex-row gap-3 justify-center items-center border-primary px-2 py-1"><FaSpotify />Entrar com Spotify</button>
-            <div className="text-[14px] text-red-400 flex flex-row">{errorMessage && <p className="flex flex-row gap-2 items-center"><MdError className="text-[18px]"/>{errorMessage}</p>}</div>
-        
+            {/* <div className="text-[14px] text-red-400 flex flex-row">{errorMessage && <p className="flex flex-row gap-2 items-center"><MdError className="text-[18px]"/>{errorMessage}</p>}</div>
+         */}
         </div>
     </form>
   )

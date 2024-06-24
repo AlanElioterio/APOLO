@@ -5,7 +5,7 @@ import { useFormStatus } from "react-dom"
 export const LoginButton = () => {
 
     const { pending } = useFormStatus()
-    const handleClick = (event:Event) => {
+    const handleClick = (event:any) => {
         if (pending) {
             event.preventDefault()
             console.log('pend')
