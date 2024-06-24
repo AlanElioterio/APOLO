@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, Variants } from "framer-motion";
+import { useEffect, useRef } from "react";
 export function MotionDivView({
   className,
   style,
@@ -50,6 +51,61 @@ children: React.ReactNode;
     >
 
       <motion.div className={className} variants={cardVariants}>
+        {children}
+
+      </motion.div>
+    </motion.div>
+  )
+}
+
+export function MotionNavBar({
+  className,
+  style,
+children,
+once,
+type,
+
+}: {
+className?: string;
+style?: any;
+once?:boolean;
+type:string;
+children: React.ReactNode;
+}){
+  const cardVariants: Variants = {
+    offscreen: {
+
+      opacity: 0,
+      transition: {
+        type: 'spring',
+        bounce: 0.4,
+        duration: 1
+      }
+    },
+    onscreen: {
+      opacity: 1,
+
+      transition: {
+        type: 'spring',
+        bounce: 0.4,
+        duration: 1
+      }
+    }
+  };
+
+
+  return(
+    <motion.div
+    initial="offscreen"
+
+    whileInView="onscreen"
+    viewport={{  once: false }}
+    
+    style={style}
+    // className="overflow-hidden"
+    >
+
+      <motion.div variants={cardVariants} className={className} >
         {children}
 
       </motion.div>

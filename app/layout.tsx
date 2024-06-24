@@ -9,9 +9,10 @@ import Image from 'next/image'
 import type { Viewport } from 'next'
 
 
-import apolloLogo from '@public/assets/images/apollo-white-logo.svg'
 import Transition from '@components/Transition'
 import { ReactNode } from 'react';
+import { MotionNavBar } from '@components/CustomAnimations';
+import NavBar from '@components/NavBar';
 
  
 export const viewport: Viewport = {
@@ -32,36 +33,12 @@ interface Props {
 const RootLayout = ({children}:Props) => {
     return (
         <html>
-           
-                <body className='select-none overflow-x-hidden h-full'>
-                    <div className='fixed z-[2000] flex-row flex justify-between items-center bg-transparent w-screen p-4 px-10'>
-
-                        <Image
-                            className='fill-red-400'
-                            alt="Logotipo"
-                            src={apolloLogo}
-                            width={75}
-                        />
-                        <div className='cursor-pointer font-bold text-[1rem] flex justify-center items-center transition-all duration-300 rounded-[20px] hover:bg-primary bg-secondary px-8 py-[0.5rem]'>
-                            Login
-                        </div>
-                    
-
-                        {/* <button onClick={()=>redirect('login')} className={`bg-[#444444] hover:bg-[${COLORS.secondary}]`}>
-                            Login
-                        </button> */}
-                        {/* <BotaoPrincipal
-                            action={()=>redirect('/login')}
-                            color={COLORS.secondary}
-                            text={'Login'}
-                        /> */}
-                    </div>
-                    
-                    <Transition>
-                        {children}
-                    </Transition>
-                </body>
-            </html>
+            <body className='bg-[#3d3d3d] select-none overflow-x-hidden h-full'>
+                <Transition>
+                    {children}
+                </Transition>
+            </body>
+        </html>
     
   )
 }

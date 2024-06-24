@@ -10,6 +10,8 @@ import lineOrange from "@public/assets/images/line-orange.svg";
 import { MotionDiv, MotionH1, MotionH2, MotionP } from "@components/Transition";
 import { MotionBenefit, MotionDivView } from "@components/CustomAnimations";
 import BenefitsSection from "@components/BenefitsSection";
+import FirstSection from "@components/FirstSection";
+import NavBar from "@components/NavBar";
 
 let feedback_list = [
   {
@@ -30,17 +32,12 @@ let feedback_list = [
     data: "15/06/2024",
     user: "Beatriz Almeida",
   },
-  {
-    texto:
-      "“O aplicativo é fantástico! Consegui descobrir novos artistas e álbuns incríveis. A comunidade também é muito ativa e engajada.",
-    data: "15/06/2024",
-    user: "Beatriz Almeida",
-  },
 ];
 
 const Home = () => {
   return (
     <section className="bg-[#030303] select-none overflow-x-hidden w-screen h-screen">
+      <NavBar/>
       <FirstSection />
       <SecondSection />
       <ThirdSection />
@@ -52,51 +49,7 @@ const Home = () => {
   );
 };
 
-const FirstSection = () => {
-  return (
-    <div
-      style={{
-        backgroundImage: "url('/assets/images/line-orange.svg')",
-        backgroundSize: 'cover',
-        backgroundPositionX:"-300px"
-      }}
-      className={`overflow-hidden flex-wrap w-full h-full items-center flex flex-col`}
-    >
-      <div className="relative top-[90%] right-0 left-0 bottom-0 ">
-        <FaAngleUp className="absolute top-0 right-0 left-0 bottom-0 cursor-pointer z-[2000] duration-500 transition-all hover:text-orange-500 text-4xl  my-3" />
-      </div>
-      <div className="relative flex flex-row overflow-hidden h-full w-full justify-center items-center">
-        {/* <Image
-          className="flex object-cover scale-125 overflow-hidden absolute z-[-200]"
-          src={lineOrange}
-          // width={1000}
-        /> */}
 
-        <div className="self-start lg:flex hidden flex-wrap ">
-          <Image alt="Mockup Celular com a página inicial" className="max-w-[700px] flex " src={mockupApollo} />
-        </div>
-
-        <div className="max-w-[600px] h-full justify-center items-center gap-5 flex flex-wrap">
-          <div className="lg:px-0 px-10 flex justify-center flex-wrap flex-col lg:gap-5 gap-3">
-            <h1 className="font-bold lg:text-5xl text-4xl ">
-              Descubra artistas, músicas e playlists de todos os gêneros.
-            </h1>
-            <p className="font-regular lg:text-[1rem] text-[0.8rem]">
-              Avaliações musicais que fazem a diferença.
-              <br />
-              Descubra novas sonoridades, acompanhe seus artistas favoritos e
-              crie a trilha sonora perfeita para cada momento da sua vida.
-            </p>
-
-            <div className="cursor-pointer w-[150px] font-bold text-[1rem] flex justify-center items-center transition-all duration-300 rounded-[20px] hover:bg-orange-800 bg-primary px-8 py-[0.5rem]">
-              Começar
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 const SecondSection = () => {
   return (
     <div
@@ -218,7 +171,7 @@ const Community = () => {
 
 const Footer = () => {
   return (
-  <div className="bg-primary flex flex-row justify-center items-center w-full h-[250px]">
+  <div className="pb-[50px] bg-primary flex flex-row justify-center items-center w-full h-[250px]">
       <MotionDiv className="px-10 gap-5 flex justify-start items-start flex-col w-full  max-w-[1330px]">
         <div
           className="text-center w-full justify-center items-center flex flex-col gap-4">
