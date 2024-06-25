@@ -32,13 +32,13 @@ interface Props {
 }
 const RootLayout = ({children}:Props) => {
     return (
-        <html>
+        
             <body className='bg-[#141414] select-none overflow-x-hidden h-full'>
                 <Transition>
                     {children}
                 </Transition>
             </body>
-        </html>
+       
     
   )
 }
