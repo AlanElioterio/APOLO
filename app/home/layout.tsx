@@ -1,4 +1,5 @@
 import Transition from "@components/Transition"
+import SideBar from "@components/home/SideBar"
 import { ReactNode } from "react"
 
 interface Props {
@@ -8,7 +9,13 @@ interface Props {
 const HomeLayout = ({children}:Props) => {
   return (
     <div>
-      
+      <Transition>
+          <div className="flex flex-row h-full w-full">
+            
+            {children}
+          </div>
+          
+      </Transition>
     </div>
   )
 }

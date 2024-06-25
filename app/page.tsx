@@ -36,7 +36,7 @@ let feedback_list = [
 
 const Home = () => {
   return (
-    <section className="bg-[#030303] select-none overflow-x-hidden w-screen h-screen">
+    <section className="text-white bg-[#141414] select-none overflow-x-hidden w-screen h-screen">
       <NavBar/>
       <FirstSection />
       <SecondSection />
@@ -72,7 +72,7 @@ const SecondSection = () => {
 };
 const ThirdSection = () => {
   return (
-    <div className="bg-[#030303]  lg:px-[10rem] md:px-[5rem] px-[2rem] py-[10rem] flex flex-row justify-center items-center w-full ">
+    <div className="bg-[#141414]  lg:px-[10rem] md:px-[5rem] px-[2rem] py-[10rem] flex flex-row justify-center items-center w-full ">
       <MotionDivView type="right" className="max-w-[1000px]  overflow-hidden w-full h-full py-20 lg:px-20 px-10 flex flex-col text-center rounded-[30px] justify-center items-center border-2 border-[#363636] bg-gradient-to-br from-[#1E1E1E] to-[#030303]  text-white font-bold    min-w-auto ">
         <MotionH1 className="lg:text-6xl  text-4xl font-extrabold">
           Avaliações Musicais que Fazem a Diferença.
@@ -88,7 +88,7 @@ const ThirdSection = () => {
 };
 const FeedBacks = () => {
   return (
-    <div className="bg-[#030303]  inline-flex sm:flex flex-row justify-center items-center w-full  pb-[100px]">
+    <div className="bg-[#141414]  inline-flex sm:flex flex-row justify-center items-center w-full  pb-[100px]">
       <MotionDivView type="left"  className="overflow-hidden flex-wrap h-full gap-5 flex flex-col">
         <MotionDiv className="text-center">
           <MotionH2 className="text-xl text-primary uppercase">Nossos</MotionH2>
