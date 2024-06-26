@@ -37,7 +37,7 @@ export const BotaoSecundario = ({acao, text}:any) => {
 export const BotaoWithWhere = ({where, text}:{where:string, text:string}) => {
     return (
       <button
-      className="hover:bg-orange-800 transition-all duration-300 text-[15px] h-[30px] w-[150px] rounded-lg bg-primary px-2 py-1"
+      className="hover:bg-orange-800 transition-all duration-300 text-[13px] h-[30px] w-[120px] rounded-lg bg-primary px-2 py-1"
        type="button" onClick={()=>(redirect('/'+where))}>
           {text}
       </button>

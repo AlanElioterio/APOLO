@@ -1,18 +1,12 @@
-// import BotaoPrincipal from '@components/buttons/BotaoPrincipal'
-
 
 import '@styles/globals.css'
-import Head from 'next/head';
-import { title } from 'process'
-import { COLORS } from '@styles/colors'
-import Image from 'next/image'
+
 import type { Viewport } from 'next'
 
 
 import Transition from '@components/Transition'
 import { ReactNode } from 'react';
-import { MotionNavBar } from '@components/CustomAnimations';
-import NavBar from '@components/NavBar';
+
 
  
 export const viewport: Viewport = {
@@ -32,12 +26,14 @@ interface Props {
 }
 const RootLayout = ({children}:Props) => {
     return (
-        
+        <html>
             <body className='bg-[#141414] select-none overflow-x-hidden h-full'>
                 <Transition>
                     {children}
                 </Transition>
             </body>
+        </html>
+            
        
     
   )

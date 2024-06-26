@@ -3,7 +3,7 @@
 import { useMotionValue } from "framer-motion";
 import { useMotionTemplate } from "framer-motion";
 import { MotionBenefit } from "./CustomAnimations";
-import { MotionDiv } from "./Transition";
+
 
 let benefits_list = [
   {

@@ -4,7 +4,7 @@ export async function GET() {
     {
       id: "1",
       titulo: "Piece of Mind",
-      artista: "Iron Maide",
+      artista: "Iron Maiden",
       capa: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPvNh16OgmK_8ERroHWChmvOTrUFR6gMj3dg&s"
     },
     {

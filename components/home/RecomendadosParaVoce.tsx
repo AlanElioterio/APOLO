@@ -1,12 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ReactNode } from "react"
+
 
 async function getData() {
     const res = await fetch(process.env.URL_BASE + 'api/dashboard/recomendado', { cache: 'no-store' })
-   console.log(process.env.URL_BASE + 'api/dashboard/recomendado')
+   
     if (!res.ok) {
-      throw new Error('Failed to fetch data')
+      console.error('Failed to fetch data')
     }
    
     return res.json()
@@ -23,7 +23,7 @@ export async function RecomendadosParaVoce({className}: RecomendadoProps){
       <div className={className}>
         {recomendados.map((recomendado)=>(
           // href={`/home/album/${recomendado.id}`}
-              <Link href={"/home"} key={recomendado.id} className="w-[200px] gap-3  flex flex-col" id={recomendado.id}>
+              <Link href={"/home"} key={recomendado.id} className="duration-200 transition-all ease-in-out hover:scale-[101.5%] w-[200px] gap-3  flex flex-col" id={recomendado.id}>
                 
                 <div className="relative overflow-hidden w-[200px] h-[200px]">
                   <Image fill className="object-top object-cover top-0 left-0 bottom-0 right-0 size-[200px] z-[-1] absolute rounded-lg " alt={`Capa do album ${recomendado.titulo}`} src={recomendado.capa}/>
