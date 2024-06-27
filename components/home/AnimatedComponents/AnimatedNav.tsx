@@ -1,7 +1,7 @@
 import { motion, useCycle } from 'framer-motion'
 import React, { useRef } from 'react'
 import { useDimensions } from './use-dimensions';
-import { MenuToggle } from './MenuToogle';
+import MenuToggle  from './MenuToogle';
 import  Navigation  from './Navigation';
 
 export const AnimatedNav = () => {

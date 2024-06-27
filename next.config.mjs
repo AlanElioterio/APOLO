@@ -11,6 +11,10 @@ const nextConfig = {
           protocol: 'https',
           hostname: 'www.rollingstone.com',
           pathname: '/wp-content/**',
+        },{
+          protocol: 'https',
+          hostname: 'imgs.search.brave.com',
+          pathname: '/**',
         },
         {
             protocol: 'https',

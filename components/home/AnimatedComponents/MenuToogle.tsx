@@ -1,7 +1,10 @@
+'use client'
 import * as React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import apolloLogo from '@public/assets/images/apollo-white-logo.svg'
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Path = (props:any) => (
   <motion.path
@@ -16,8 +19,12 @@ const Path = (props:any) => (
 interface ToggleProps{
   toggle: ()=>void;
 }
-export const MenuToggle = ( {toggle}:ToggleProps) => (
-  <div className="absolute z-[4001] gap-5  flex flex-row">
+
+
+function MenuToogle({toggle}:ToggleProps) {
+  const router = useRouter()
+  return (
+    <div className="absolute z-[4001] gap-5  flex flex-row">
     
     <button className="" onClick={toggle}>
     <svg width="23" height="23"  viewBox="0 0 23 23">
@@ -50,13 +57,18 @@ export const MenuToggle = ( {toggle}:ToggleProps) => (
     </svg>
   </button>
   
+  <Link href={'/home'} className="w-full h-full">
   <Image
                         alt="Logotipo"
                         src={apolloLogo}
+                        onClick={()=>router.push("/home")}
                         className=''
                         width={75}
                     />
-  </div>
-
+  </Link>
   
-);
+  </div>
+  )
+}
+
+export default MenuToogle

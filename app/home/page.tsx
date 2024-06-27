@@ -12,7 +12,7 @@ import NavBarHome from "@components/home/NavBarHome";
 
 const Home = () => {
   return (
-    <section className="overflow-x-hidden bg-transparent z-[1] text-white w-screen h-full">
+    <section className="overflow-x-hidden bg-transparent z-[1] text-white w-screen min-h-screen h-full">
 
 
       <section className=" w-full h-full overflow-y-hidden sm:gap-5 gap-5 flex-col flex">

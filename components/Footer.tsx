@@ -5,7 +5,7 @@ import apolloLogo from '@public/assets/images/apollo-white-logo.svg'
 
 export const Footer = ({className}:{className?:string}) => {
     return (
-    <div className="   bg-primary flex flex-row justify-center items-center w-full sm:h-[180px] h-[160px]">
+    <div className=" text-white  bg-primary flex flex-row justify-center items-center w-full sm:h-[180px] h-[160px]">
         <MotionDiv className="px-10 gap-5 flex justify-start items-start flex-col w-full  max-w-[1330px]">
           <div
             className="text-center w-full justify-center items-center flex flex-col gap-4">

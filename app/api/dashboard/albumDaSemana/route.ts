@@ -1,6 +1,6 @@
 export async function GET() {
 
-    let album:Album = {
+    let album:AlbumRecomendado = {
         id: "1",
         titulo: "After Hours",
         artista: "The Weeknd",

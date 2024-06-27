@@ -17,7 +17,7 @@ async function getData() {
   }
   
 export async function RecomendadosParaVoce({className}: RecomendadoProps){
-    const recomendados:Album[] = await getData();
+    const recomendados:AlbumRecomendado[] = await getData();
     
     return(
       <div className={className}>

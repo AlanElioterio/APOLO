@@ -21,7 +21,7 @@ const SignInForm = () => {
   const [errorMessage, dispatch] = useFormState(authenticate, undefined)
 
   return (
-    <form action={dispatch} className="w-full flex gap-6 flex-col">
+    <form action={dispatch} className="text-white w-full flex gap-6 flex-col">
                     
         <div className="flex flex-col">
             <label className="text-[24px] font-bold">Seja bem-vindo!</label>

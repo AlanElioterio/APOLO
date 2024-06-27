@@ -17,7 +17,7 @@ async function getData() {
   }
 
 const AlbumRecomendado = async () => {
-    const albumDaSemana:Album = await getData();
+    const albumDaSemana:AlbumRecomendado = await getData();
   return (
     <Transition className='overflow-hidden w-full h-full'>
       

@@ -1,6 +1,6 @@
 export async function GET() {
 
-  let recomendados:Album[] = [
+  let recomendados:AlbumRecomendado[] = [
     {
       id: "1",
       titulo: "Piece of Mind",

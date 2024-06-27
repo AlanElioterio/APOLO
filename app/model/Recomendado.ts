@@ -1,5 +1,5 @@
 
-class Album{
+class AlbumRecomendado{
   id:string;
   titulo:string;
   artista:string;
